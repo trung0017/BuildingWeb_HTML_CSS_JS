@@ -1,0 +1,25 @@
+nav {
+    background-color: #f0f0f0; /* Set background color */
+    padding: 10px; /* Add padding */
+  }
+  
+  nav ul {
+    list-style: none; /* Remove default bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  nav li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 20px; /* Add space between list items */
+  }
+  
+  nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set link text color */
+  }
+  
+  nav a:hover {
+    color: blue; /* Change link text color on hover */
+  }
+  
