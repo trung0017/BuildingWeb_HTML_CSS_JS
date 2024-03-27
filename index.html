@@ -18,16 +18,13 @@
             console.log("Kinh độ: " + position.coords.longitude);
         }
 
-        function validateForm()
-        {
+        function validateForm() {
             let name = document.forms['myForm']['fname'].value;
             let pass = document.forms['myForm']['fpass'].value;
-            if (name == '')
-            {
+            if (name == '') {
                 alert("Tên không được để trống");
                 return false;
-            } else if (pass == '')
-            {
+            } else if (pass == '') {
                 alert("Mật khẩu không được để trống");
                 return false;
             } else {
@@ -35,9 +32,8 @@
             }
         }
 
-        function login()
-        {
-            if (validateForm()){
+        function login() {
+            if (validateForm()) {
                 alert("Đăng nhập thành công");
             } else {
                 alert("Đăng nhập thất bại");
@@ -105,15 +101,23 @@
                         </tr>
                     </table>
                 </td>
-                <td>Chứa APIs địa lý</td>
                 <td>
-                    <h2>Form đăng nhập</h2>
-                    <form name="myForm" action="#" onsubmit="login()">
-                        Name: <input type="text" name="fname"><br>
-                        Pass: <input type="password" name="fpass" id="">
-                        <input type="submit" name="submit" id="" value="Submit">
-                    </form>
-                </td>
+            <tr>
+                Chứa APIs địa lý
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1339.8873965336863!2d106.035614225295!3d9.783937423206245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0438a39790849%3A0xa01b3de5e2fa2e27!2zVHLGsOG7nW5nIFRp4buDdSBI4buNYyBOaMahbiBN4bu5IDE!5e1!3m2!1svi!2sca!4v1711509055015!5m2!1svi!2sca"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </tr>
+            <tr>
+                <h2>Form đăng nhập</h2>
+                <form name="myForm" action="#" onsubmit="login()">
+                    Name: <input type="text" name="fname"><br>
+                    Pass: <input type="password" name="fpass" id="">
+                    <input type="submit" name="submit" id="" value="Submit">
+                </form>
+            </tr>
+            </td>
             </tr>
         </table>
     </div>
