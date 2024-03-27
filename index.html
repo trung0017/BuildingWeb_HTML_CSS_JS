@@ -8,20 +8,48 @@
     <link rel="stylesheet" href="style.css">
     <script>
         if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition);
+            navigator.geolocation.getCurrentPosition(showPosition);
         } else {
-          console.log("Trình duyệt không hỗ trợ API HTML Địa lý");
+            console.log("Trình duyệt không hỗ trợ API HTML Địa lý");
         }
-      
+
         function showPosition(position) {
-          console.log("Vĩ độ: " + position.coords.latitude);
-          console.log("Kinh độ: " + position.coords.longitude);
+            console.log("Vĩ độ: " + position.coords.latitude);
+            console.log("Kinh độ: " + position.coords.longitude);
         }
-      </script>
+
+        function validateForm()
+        {
+            let name = document.forms['myForm']['fname'].value;
+            let pass = document.forms['myForm']['fpass'].value;
+            if (name == '')
+            {
+                alert("Tên không được để trống");
+                return false;
+            } else if (pass == '')
+            {
+                alert("Mật khẩu không được để trống");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function login()
+        {
+            if (validateForm()){
+                alert("Đăng nhập thành công");
+            } else {
+                alert("Đăng nhập thất bại");
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <div><img width="1000" height="250" src="https://assets-global.website-files.com/6502a82cff431778b5d82829/65151a4fee4910b47efcfc5c_hero-p-800.jpeg" alt=""></div>
+    <div><img width="1000" height="250"
+            src="https://assets-global.website-files.com/6502a82cff431778b5d82829/65151a4fee4910b47efcfc5c_hero-p-800.jpeg"
+            alt=""></div>
     <div class="header">
         <div class="site-header">
         </div>
@@ -37,31 +65,55 @@
         </div>
     </div>
 
-    <div class="body">
+    <div class="body" id="body1">
         <h2>This is Body</h2>
+        <button onclick='myFunction()'>Click me</button>
         <table>
             <tr>
                 <td>
                     Tạo bảng chứa hình ảnh và video
                     <table>
                         <tr>
-                            <td><img width="200" height="150" src="https://img.vn.my-best.com/content_section/choice_component/sub_contents/3da1883c20c9f39af4c57c9ab3bb756a.jpg?ixlib=rails-4.3.1&q=70&lossless=0&w=690&fit=max&s=18df6be71b7a6e1bdbb063ecfe5af92a" alt="Đây là hình ảnh"></td>
-                            <td><img width="200" height="150" src="https://cafebiz.cafebizcdn.vn/thumb_w/640/pr/2021/photo-1-1633753370827594457058-9-0-359-561-crop-1633753427690-63769379980414.jpg" alt=""></td>
-                            <td><img width="200" height="150" src="https://file.hstatic.net/1000392339/file/ao-so-mi-nam-cong-so-cao-cap-may10-_ad81587f96754973958aa65aee7b2828_grande.jpeg" alt=""></td>
+                            <td><img width="200" height="150"
+                                    src="https://img.vn.my-best.com/content_section/choice_component/sub_contents/3da1883c20c9f39af4c57c9ab3bb756a.jpg?ixlib=rails-4.3.1&q=70&lossless=0&w=690&fit=max&s=18df6be71b7a6e1bdbb063ecfe5af92a"
+                                    alt="Đây là hình ảnh"></td>
+                            <td><img width="200" height="150"
+                                    src="https://cafebiz.cafebizcdn.vn/thumb_w/640/pr/2021/photo-1-1633753370827594457058-9-0-359-561-crop-1633753427690-63769379980414.jpg"
+                                    alt=""></td>
+                            <td><img width="200" height="150"
+                                    src="https://file.hstatic.net/1000392339/file/ao-so-mi-nam-cong-so-cao-cap-may10-_ad81587f96754973958aa65aee7b2828_grande.jpeg"
+                                    alt=""></td>
                         </tr>
                         <tr>
-                            <td><img width="200" height="150" src="https://file.hstatic.net/1000392339/file/ao-so-mi-nam-cong-so-cao-cap-an-phuoc_3645043f016248d2bec35a368ed8aef9_grande.jpeg" alt=""></td>
-                            <td><img width="200" height="150" src="https://file.hstatic.net/1000392339/file/ao-so-mi-nam-cong-so-cao-cap-viet-tien_e5a52e9380084ccba423716c4f382559_grande.jpeg" alt=""></td>
-                            <td><img width="200" height="150" src="https://file.hstatic.net/1000392339/file/ao-so-mi-nam-cong-so-cao-cap-coolmate_1aee4e3443cd4684a4be7fba5c2e91e1_grande.jpeg" alt=""></td>
+                            <td><img width="200" height="150"
+                                    src="https://file.hstatic.net/1000392339/file/ao-so-mi-nam-cong-so-cao-cap-an-phuoc_3645043f016248d2bec35a368ed8aef9_grande.jpeg"
+                                    alt=""></td>
+                            <td><img width="200" height="150"
+                                    src="https://file.hstatic.net/1000392339/file/ao-so-mi-nam-cong-so-cao-cap-viet-tien_e5a52e9380084ccba423716c4f382559_grande.jpeg"
+                                    alt=""></td>
+                            <td><img width="200" height="150"
+                                    src="https://file.hstatic.net/1000392339/file/ao-so-mi-nam-cong-so-cao-cap-coolmate_1aee4e3443cd4684a4be7fba5c2e91e1_grande.jpeg"
+                                    alt=""></td>
                         </tr>
                         <tr>
-                            <td><iframe src="https://www.youtube.com/embed/GunMOdCgsek" width="200" height="150" allowfullscreen></iframe></td>
-                            <td><iframe src="https://www.youtube.com/embed/xVueLvn0WYE" width="200" height="150" allowfullscreen></iframe></td>
-                            <td><iframe src="https://www.youtube.com/embed/AAdSUAJ7ngQ" width="200" height="150" allowfullscreen></iframe></td>
+                            <td><iframe src="https://www.youtube.com/embed/GunMOdCgsek" width="200" height="150"
+                                    allowfullscreen></iframe></td>
+                            <td><iframe src="https://www.youtube.com/embed/xVueLvn0WYE" width="200" height="150"
+                                    allowfullscreen></iframe></td>
+                            <td><iframe src="https://www.youtube.com/embed/AAdSUAJ7ngQ" width="200" height="150"
+                                    allowfullscreen></iframe></td>
                         </tr>
                     </table>
                 </td>
                 <td>Chứa APIs địa lý</td>
+                <td>
+                    <h2>Form đăng nhập</h2>
+                    <form name="myForm" action="#" onsubmit="login()">
+                        Name: <input type="text" name="fname"><br>
+                        Pass: <input type="password" name="fpass" id="">
+                        <input type="submit" name="submit" id="" value="Submit">
+                    </form>
+                </td>
             </tr>
         </table>
     </div>
